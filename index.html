@@ -1,62 +1,59 @@
 <html>
-<head>
-  <title>Расчет двухтарифного счетчика</title>
+  <head>
+    <title>Расчет двухтарифного счетчика</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  </head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-</head>
-<meta charset="utf-8">
-<body>
-
-<div class="container">
-  <div class="row">
-    <div class=".col-12">
-      <div class="text-center">
-        <br>
-      <h1><i class="fas fa-calculator"></i> <i class="fas fa-adjust"></i></h1>
-      <h1>Расчет двухтарифного счетчика</h1><br>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class=".col-12">
+          <div class="text-center">
+            <br>
+            <h1><i class="fas fa-calculator"></i> <i class="fas fa-adjust"></i></h1>
+            <h1>Расчет двухтарифного счетчика</h1>
+            <br>
+          </div>
+          <form>
+            <div class="input-group input-group-lg">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg"><i class="fas fa-arrow-left"></i> &nbsp;<i class="fas fa-sun"></i></span>
+              </div>
+              <input type="number" id="validationDefault01" name="previousDay" class="form-control" placeholder="Предыдущие показания дневного счетчика" required>
+            </div>
+            <br>
+            <div class="input-group input-group-lg">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg"><i class="fas fa-arrow-down"></i> &nbsp;<i class="fas fa-sun"></i></span>
+              </div>
+              <input type="number" id="validationDefault02" name="currentDay" class="form-control" placeholder="Текущие показания дневного счетчика" required>
+            </div>
+            <br>
+            <div class="input-group input-group-lg">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg"><i class="fas fa-arrow-left"></i> &nbsp;<i class="fas fa-moon"></i></span>
+              </div>
+              <input type="number" id="validationDefault03" name="previousNight" class="form-control" placeholder="Предыдущие показания ночного счетчика" required>
+            </div>
+            <br>
+            <div class="input-group input-group-lg">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg"><i class="fas fa-arrow-down"></i> &nbsp;<i class="fas fa-moon"></i></span>
+              </div>
+              <input type="number" id="validationDefault04" name="currentNight" class="form-control" placeholder="Текущие показания ночного счетчика" required>
+            </div>
+            <br>
+            <button type="submit" id="button" onclick='calculating()' class="btn btn-primary btn-block btn-lg">Расчет</button>
+          </form>
+        </div>
       </div>
-    
-<form>
-  <div class="input-group input-group-lg">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-lg"><i class="fas fa-arrow-left"></i> &nbsp;<i class="fas fa-sun"></i></span>
-  </div>
-  <input type="number" id="validationDefault01" name="previousDay" class="form-control" placeholder="Предыдущие показания дневного счетчика" required>
-</div><br>
-  
-  <div class="input-group input-group-lg">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-lg"><i class="fas fa-arrow-down"></i> &nbsp;<i class="fas fa-sun"></i></span>
-  </div>
-  <input type="number" id="validationDefault02" name="currentDay" class="form-control" placeholder="Текущие показания дневного счетчика" required>
-</div><br>
-  
-  <div class="input-group input-group-lg">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-lg"><i class="fas fa-arrow-left"></i> &nbsp;<i class="fas fa-moon"></i></span>
-  </div>
-  <input type="number" id="validationDefault03" name="previousNight" class="form-control" placeholder="Предыдущие показания ночного счетчика" required>
-</div><br>
-  
-  <div class="input-group input-group-lg">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-lg"><i class="fas fa-arrow-down"></i> &nbsp;<i class="fas fa-moon"></i></span>
-  </div>
-  <input type="number" id="validationDefault04" name="currentNight" class="form-control" placeholder="Текущие показания ночного счетчика" required>
-</div><br>
-
-  <button type="submit" id="button" onclick='calculating()' class="btn btn-primary btn-block btn-lg">Расчет</button>
-</form>
-</div>
-</div>
-</div>
-  
-<script src="script.js"></script>
-
-</body>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>

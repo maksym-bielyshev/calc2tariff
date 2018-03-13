@@ -1,4 +1,4 @@
 .titleLables {
-  margin-left: 3px;
-  color: red;
+  margin-left: 3px !important;
+  color: red !important;
 }

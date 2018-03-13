@@ -1,8 +1,8 @@
 function calculating() {
-    let previousDay = document.getElementById("validationDefault01").value;
-    let currentDay = document.getElementById("validationDefault02").value;
-    let previousNight = document.getElementById("validationDefault03").value;
-    let currentNight = document.getElementById("validationDefault04").value;
+    let previousDay = document.getElementById("previousDay").value;
+    let currentDay = document.getElementById("currentDay").value;
+    let previousNight = document.getElementById("previousNight").value;
+    let currentNight = document.getElementById("currentNight").value;
     let differenceDay = currentDay - previousDay;
     let differenceNight = currentNight - previousNight;
     const tariffFirst = 0.9;

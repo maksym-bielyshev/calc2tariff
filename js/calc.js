@@ -13,15 +13,15 @@ function calculating() {
     let billNightSecond = (differenceNight-100)*0.5*tariffSecond+45;
 
     if (differenceDay <= 100 && differenceNight <= 100) {
-        alert((billDayFirst + billNightFirst).toFixed(2) + ' ₴');
+        document.getElementById("result").innerHTML = (billDayFirst + billNightFirst).toFixed(2) + ' ₴';
 
     } else if (differenceDay > 100 && differenceNight <= 100) {
-        alert((billDaySecond + billNightFirst).toFixed(2) + '  ₴');
+      document.getElementById("result").innerHTML = (billDaySecond + billNightFirst).toFixed(2) + '  ₴';
 
     } else if (differenceDay > 100 && differenceNight > 100) {
-        alert((billDaySecond + billNightSecond).toFixed(2) + ' ₴');
+      document.getElementById("result").innerHTML = (billDaySecond + billNightSecond).toFixed(2) + ' ₴';
 
     } else if (differenceDay <= 100 && differenceNight > 100) {
-        alert((billDayFirst + billNightSecond).toFixed(2) + ' ₴');
+      document.getElementById("result").innerHTML = (billDayFirst + billNightSecond).toFixed(2) + ' ₴';
     }
 }

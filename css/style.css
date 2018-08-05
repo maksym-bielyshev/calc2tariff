@@ -3,6 +3,10 @@
 }
 
 #result {
-  margin: 40px;
+  margin: 20px;
   color: green;
+}
+
+#resultKwNight {
+  margin-bottom: 50px;
 }

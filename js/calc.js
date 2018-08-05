@@ -11,7 +11,7 @@ function calculating() {
     let billDaySecond = (differenceDay-100)*tariffSecond+90;
     let billNightFirst = differenceNight*tariffFirst*0.5;
     let billNightSecond = (differenceNight-100)*0.5*tariffSecond+45;
-
+  
     if (differenceDay <= 100 && differenceNight <= 100) {
         document.getElementById("result").innerHTML = (billDayFirst + billNightFirst).toFixed(2) + ' ₴';
 
@@ -24,4 +24,7 @@ function calculating() {
     } else if (differenceDay <= 100 && differenceNight > 100) {
       document.getElementById("result").innerHTML = (billDayFirst + billNightSecond).toFixed(2) + ' ₴';
     }
+  
+  document.getElementById("resultKwDay").innerHTML = 'Киловатт дневного счетчика: ' + (differenceDay);
+  document.getElementById("resultKwNight").innerHTML = 'Киловатт ночного счетчика: ' + (differenceNight);
 }

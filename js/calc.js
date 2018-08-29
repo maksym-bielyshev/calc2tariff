@@ -25,7 +25,7 @@ function calculating() {
       document.getElementById("result").innerHTML = (billDayFirst + billNightSecond).toFixed(2) + ' ₴';
     }
   
-  document.getElementById("titleKw").innerHTML = 'Киловатт';
-  document.getElementById("resultKwDay").innerHTML = 'дневных: ' + (differenceDay);
-  document.getElementById("resultKwNight").innerHTML = 'ночных: ' + (differenceNight);
+  document.getElementById("titleKw").innerHTML = 'Киловатт:';
+  document.getElementById("resultKwDay").innerHTML = 'дневных — ' + (differenceDay);
+  document.getElementById("resultKwNight").innerHTML = 'ночных — ' + (differenceNight);
 }
